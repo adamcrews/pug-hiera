@@ -13,7 +13,7 @@
 :mysql:
   :host: pug-node.puppetlabs.vm
   :user: hiera
-  :pass: supersecret
+  :pass: secret
   :database: hiera
   :query: 
     - SELECT val FROM configuration WHERE var='%{key}' AND environment='%{environment}'
