@@ -1,5 +1,7 @@
 class phiera::master { 
 
+  class { '::mysql::client': }
+
   package { 'hiera-mysql':
     ensure   => present,
     provider => pe_gem,
