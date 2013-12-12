@@ -1,5 +1,6 @@
 :backends:
   - yaml
+  - mysql
 
 :hierarchy:
   - "fqdn/%{fqdn}"
@@ -7,4 +8,14 @@
 
 :yaml:
   :datadir: "/etc/puppetlabs/puppet/environments/%{environment}/hieradata"
+
+
+:host: pug-node.puppetlabs.vm
+  :user: hiera
+  :pass: suppersecred
+  :database: hiera
+    :query: 
+      - SELECT val FROM configuration WHERE var='%{key}' AND environment='%{environment}'
+      - SELECT val FROM configuration WHERE var='%{key}' AND location='%{location}'
+      - SELECT val FROM configuration WHERE var='%{key}' AND environment='common'
 
