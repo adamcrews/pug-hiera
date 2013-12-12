@@ -14,8 +14,8 @@
   :user: hiera
   :pass: suppersecred
   :database: hiera
-    :query: 
-      - SELECT val FROM configuration WHERE var='%{key}' AND environment='%{environment}'
-      - SELECT val FROM configuration WHERE var='%{key}' AND location='%{location}'
-      - SELECT val FROM configuration WHERE var='%{key}' AND environment='common'
+  :query: 
+    - SELECT val FROM configuration WHERE var='%{key}' AND environment='%{environment}'
+    - SELECT val FROM configuration WHERE var='%{key}' AND location='%{location}'
+    - SELECT val FROM configuration WHERE var='%{key}' AND environment='common'
 
