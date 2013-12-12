@@ -10,10 +10,10 @@
 :yaml:
   :datadir: "/etc/puppetlabs/puppet/environments/%{environment}/hieradata"
 
-
-:host: pug-node.puppetlabs.vm
+:mysql:
+  :host: pug-node.puppetlabs.vm
   :user: hiera
-  :pass: suppersecred
+  :pass: suppersecret
   :database: hiera
   :query: 
     - SELECT val FROM configuration WHERE var='%{key}' AND environment='%{environment}'
