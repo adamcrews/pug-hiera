@@ -14,7 +14,7 @@ class phiera::mysql {
   mysql::db { 'hiera':
     user     => 'hiera',
     password => 'secret',
-    host     => 'pug-master.puppetlabs.vm
+    host     => $settings::server,
     grant    => [ 'SELECT' ],
   }
 
